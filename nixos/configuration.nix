@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    inputs.determinate.nixosModules.default
     ./hardware-configuration.nix
   ];
 
@@ -25,15 +26,10 @@
     in
     {
       settings = {
-        experimental-features = "flakes nix-command";
         # Disable global registry
         flake-registry = "";
         # Workaround for https://github.com/NixOS/nix/issues/9574
         nix-path = config.nix.nixPath;
-        trusted-users = [
-          "root"
-          "user"
-        ];
       };
       # Disable channels
       channel.enable = false;
