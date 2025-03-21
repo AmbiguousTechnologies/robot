@@ -1,7 +1,8 @@
 {
   description = "AmbiguousTechnologies NixOS robot";
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz";
+    nixpkgs.url = "https://flakehub.com/f/nixos/nixpkgs/0.2411.*";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
   };
   outputs =
     { self
